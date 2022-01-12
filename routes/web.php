@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CreativeWorkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Route::get('/result', function () {
     return view('result');
 });
+
+Route::resource('/creative_work', 'App\Http\Controllers\CreativeWorkController@getAll');
